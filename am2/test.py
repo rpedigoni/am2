@@ -1,7 +1,7 @@
 # coding: utf-8
 import unittest
 from neuron import (Neuron, BaseTransferFunction,
-                    SigmoidTransferFunction, StaircaseTransferFunction)
+                    SigmoidTransferFunction, StepTransferFunction)
 from perceptron import Perceptron
 
 
@@ -26,19 +26,19 @@ class SigmoidTransferFunctionTest(unittest.TestCase):
         self.assertEqual(v, 0.5)
 
 
-class StairCaseTransferFunctionTest(unittest.TestCase):
-    def test_staircase_true(self):
+class StepTransferFunctionTest(unittest.TestCase):
+    def test_step_true(self):
         neuron = Neuron(
             weights=[1, 2, 3],
-            transfer_function=StaircaseTransferFunction,
+            transfer_function=StepTransferFunction,
         )
 
         self.assertEqual(neuron.run([1, 2, 3]), 1)
 
-    def test_staircase_false(self):
+    def test_step_false(self):
         neuron = Neuron(
             weights=[1, 2, 3],
-            transfer_function=StaircaseTransferFunction,
+            transfer_function=StepTransferFunction,
             function=lambda p: p >= 7,  # any function can be used here
         )
         self.assertEqual(neuron.run([1, 1, 1]), 0)

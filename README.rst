@@ -15,11 +15,11 @@ Instantiating a neuron with a sigmoid transfer function: ::
     print neuron.run([3, 2, 1])
 
 
-Or with a staircase transfer function: ::
+Or with a step transfer function: ::
 
-    from am2 import Neuron, StaircaseTransferFunction
+    from am2 import Neuron, StepTransferFunction
 
-    neuron = Neuron(StaircaseTransferFunction, function=lambda y: y > 2, weights=[0, 1, 1])
+    neuron = Neuron(StepTransferFunction, function=lambda y: y > 2, weights=[0, 1, 1])
     print neuron.run([1, 1, 1])
 
 

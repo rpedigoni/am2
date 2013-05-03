@@ -15,7 +15,7 @@ class SigmoidTransferFunction(BaseTransferFunction):
         return 1.0 / (1.0 + math.exp(1) ** (-1 * t))
 
 
-class StaircaseTransferFunction(BaseTransferFunction):
+class StepTransferFunction(BaseTransferFunction):
     def __init__(self, function=None):
         if function:
             self.function = function

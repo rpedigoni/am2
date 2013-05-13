@@ -37,6 +37,8 @@ A simple Perceptron_ is implemented: ::
         ((1, 0, 0), 1),
         ((1, 0, 1), 1),
         ((1, 1, 0), 1),
+
+
         ((1, 1, 1), 0),
     ]
 
@@ -47,3 +49,8 @@ A simple Perceptron_ is implemented: ::
 
 
 .. _Perceptron: http://en.wikipedia.org/wiki/Perceptron
+
+
+``matplotlib`` is used to plot graphs (you must have ``freetype`` and ``libpng`` installed)
+
+

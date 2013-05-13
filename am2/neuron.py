@@ -20,7 +20,7 @@ class StepTransferFunction(BaseTransferFunction):
         if function:
             self.function = function
         else:
-            self.function = lambda y: y >= 1
+            self.function = lambda x: x >= 1
 
     def run(self, t):
         return 1 if self.function(t) else 0
